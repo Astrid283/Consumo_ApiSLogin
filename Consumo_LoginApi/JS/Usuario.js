@@ -52,9 +52,6 @@ function CargarUsuarios() {
           "<td>" +
           MisUsuarios[i].fecha_registro +
           "</td>" +
-           '<td><input type="button" onclick="CargarUsuario(' +
-          MisUsuarios[i].codigo_usuario +
-          ')" id="btnInsertarUsuario" class="btn btn-success" value="Insertar"></td>' +
           "</tr>";
         $("#DataUsuarios").html(Usuarios);
       }
