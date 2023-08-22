@@ -17,7 +17,7 @@ function InsertarUsuario() {
     dias_caducidad_pass: $("#dias_caducidad_pass").val(),
     rol: $("#rol").val(),
     intentos_incorrectos: $("#intentos_incorrectos").val(),
-    fecha_registro: $("#fecha_registro").val(),
+    fecha_registro: $(Date).val()
   };
 
   var datosUsuarioJson = JSON.stringify(datosUsuario);
