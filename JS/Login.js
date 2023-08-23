@@ -17,22 +17,6 @@ function FormularioLogin (){
       };
     
       var datosUsuarioJson = JSON.stringify(datosUsuario);
-    
-      $.ajax({
-        url: UrlApiLogin,
-        type: "POST",
-        data: datosUsuarioJson,
-        datatype: "JSON",
-        contentType: "application/json",
-        //aqui es donde deben ir las validaciones
-        success: function (response) {
-          alert("Usuario Ingresado Exitosamente");
-          $("#FormularioNuevoUsuario").submit();
-        },
-        error: function (textError, errorThrown) {
-          alert("Error: " + textError + errorThrown);
-        },
-      });
       //hasta aqui es donde deben ir las validaciones
 }
 

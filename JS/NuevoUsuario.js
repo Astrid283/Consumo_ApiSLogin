@@ -1,10 +1,10 @@
-var UrlApiInsertUsuario = "http://localhost:5002/usuario/insertar/:codigo_usuario";
+var UrlApiNuevoUsuario = "http://localhost:5002//nuevousuario/agregar/:codigo_usuario";
 
 $(document).ready(function () {
-  CargarUsuarios();
+  NuevoUsuario();
 });
 
-function InsertarUsuario() {
+function NuevoUsuario() {
   var datosUsuario = {
     codigo_usuario: $("#codigo_usuario").val(),
     nombre: $("#nombre").val(),
@@ -23,14 +23,14 @@ function InsertarUsuario() {
   var datosUsuarioJson = JSON.stringify(datosUsuario);
 
   $.ajax({
-    url: UrlApiInsertUsuario,
+    url: UrlApiNuevoUsuario,
     type: "POST",
     data: datosUsuarioJson,
     datatype: "JSON",
     contentType: "application/json",
     success: function (response) {
       alert("Usuario Ingresado Exitosamente");
-      $("#FormularioNuevoUsuario").submit();
+      $("#FormularioUsuarios").submit();
     },
     error: function (textError, errorThrown) {
       alert("Error: " + textError + errorThrown);
