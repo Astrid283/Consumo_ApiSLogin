@@ -12,27 +12,32 @@
 
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-primary bg-primary">
-      <div class="container-fluid">
-          <a class="navbar-brand text-light" href="Home.html">G2_19</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                  <li class="nav-item">
-                      <a class="nav-link active text-light" aria-current="page" href="Home.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link text-light" href="Usuario.html">Usuarios</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link text-light" href="NuevoUsuario.html">Nuevo Usuario</a>
-                  </li>
-              </ul>
+    <nav class="navbar navbar-expand-lg navbar-secondary bg-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light" href="Home.html">
+              <img src="https://i.pinimg.com/originals/06/c2/50/06c250b61d5e8a4eeff660e332511010.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-current="page" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="Usuario.html">Usuarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="Registro2.html">Nuevo Usuario</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex">
+              <a class="nav-link text-light" href="Login.html">Cerrar sesión</a>
           </div>
-      </div>
-  </nav>
+        </div>
+    </nav>
   
 
  <div class="container mt-4">
@@ -60,6 +65,23 @@
         <br>
   </div>
 
+    <script>
+        // Obtener todas las etiquetas con la clase "fecha"
+        const fechas = document.querySelectorAll('.fecha');
+
+        // Iterar a través de cada elemento y formatear la fecha
+        fechas.forEach(fechaElement => {
+            const fechaISO = fechaElement.textContent; // Obtener el contenido de la etiqueta
+            const fechaObj = new Date(fechaISO); // Crear un objeto de fecha a partir de la cadena ISO
+
+            // Formatear la fecha en formato deseado (por ejemplo, "dd/mm/yyyy")
+            const opcionesDeFormato = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            const fechaFormateada = fechaObj.toLocaleDateString(undefined, opcionesDeFormato);
+
+            // Actualizar el contenido de la etiqueta con la fecha formateada
+            fechaElement.textContent = fechaFormateada;
+        });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
