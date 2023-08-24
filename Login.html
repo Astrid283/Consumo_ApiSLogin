@@ -14,24 +14,24 @@
     }
 
     .login {
-  min-height: 100vh;
-}
+    min-height: 100vh;
+    }
 
-.bg-image {
-  background-image: url('https://images.unsplash.com/5/unsplash-kitsune-4.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bc01c83c3da0425e9baa6c7a9204af81/600x1200');
-  background-size: cover;
-  background-position: center;
-}
+    .bg-image {
+      background-image: url('https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg');
+      background-size: cover;
+      background-position: center;
+    }
 
-.login-heading {
-  font-weight: 300;
-}
+    .login-heading {
+      font-weight: 300;
+    }
 
-.btn-login {
-  font-size: 0.9rem;
-  letter-spacing: 0.05rem;
-  padding: 0.75rem 1rem;
-}
+    .btn-login {
+      font-size: 0.9rem;
+      letter-spacing: 0.05rem;
+      padding: 0.75rem 1rem;
+    }
   </style>
 </head>
 <body>
@@ -49,18 +49,18 @@
                     <!-- Sign In Form -->
                     <form>
                       <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="101010">
+                        <input type="text" class="form-control" id="usuario" placeholder="Usuario" required>
                         <label for="floatingInput">Usuario</label>
                       </div>
                       <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+                        <input type="password" class="form-control" id="contraseña" placeholder="Contraseña" required>
                         <label for="floatingPassword">Contraseña</label>
                       </div>
       
                       <div class="d-grid">
                         <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Ingresar</button>
                         <div class="text-center">
-                          <a class="small" href="NuevoUsuario.html">Crear nuevo usuario</a>
+                          <a class="small" href="Registro.html">Crear nuevo usuario</a>
                         </div>
                       </div>
       
