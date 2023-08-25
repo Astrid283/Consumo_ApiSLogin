@@ -2,6 +2,17 @@ var UrlApiGetAllUsuarios = "http://localhost:5002/usuario/getall";
 
 $(document).ready(function () {
   CargarUsuarios();
+
+  //Formato de fecha correcta
+  const ultimo_ingresojs = document.getElementById('ultimo_ingreso');
+  const fecha_registrojs = document.getElementById('fecha_registro');
+  const fecha_actual = new Date();
+
+  const formato_fecha = fecha_actual.toISOString().split('T')[0];
+
+  ultimo_ingresojs.value = formato_fecha;
+  fecha_registrojs.value = formato_fecha;
+  //Fin formato de fecha correcta
 });
 
 function CargarUsuarios() {

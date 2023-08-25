@@ -27,11 +27,6 @@
       font-weight: 300;
     }
 
-    .btn-login {
-      font-size: 0.9rem;
-      letter-spacing: 0.05rem;
-      padding: 0.75rem 1rem;
-    }
   </style>
 </head>
 <body>
@@ -49,16 +44,16 @@
                     <!-- Sign In Form -->
                     <form>
                       <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="usuario" placeholder="Usuario" required>
+                        <input type="text" class="form-control" id="codigo_usuario" placeholder="Usuario" required>
                         <label for="floatingInput">Usuario</label>
                       </div>
                       <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="contraseña" placeholder="Contraseña" required>
+                        <input type="password" class="form-control" id="contra" placeholder="Contraseña" required>
                         <label for="floatingPassword">Contraseña</label>
                       </div>
       
                       <div class="d-grid">
-                        <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Ingresar</button>
+                        <button class="btn btn-primary text-uppercase fw-bold mb-2" type="button" onclick="FormularioLogin()">Ingresar</button>
                         <div class="text-center">
                           <a class="small" href="Registro.html">Crear nuevo usuario</a>
                         </div>
